@@ -167,7 +167,8 @@ Upcoming phases will focus on backend module development, database integration, 
 M.Tech Cyber Security
 National Forensic Sciences University (NFSU), Delhi
 
-Backend Internship Program – Schedula
+Backend Internship Program – PearlThought
+
 
 
 
