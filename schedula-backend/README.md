@@ -1,98 +1,242 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# 🏥 Schedula Backend
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+A healthcare appointment scheduling platform built using NestJS and PostgreSQL that helps patients discover doctors, book appointments, manage schedules, and receive timely notifications.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+---
 
-## Description
+# Project Overview
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Schedula is designed to simplify the appointment booking process between patients and healthcare professionals.
 
-## Project setup
+Traditional appointment scheduling often involves phone calls, manual records, and long waiting times. These processes can lead to scheduling conflicts, communication gaps, and poor user experience.
 
-```bash
-$ npm install
+The goal of Schedula is to provide a centralized platform where patients can easily find doctors, check their availability, schedule appointments, and stay informed through automated notifications. At the same time, doctors can efficiently manage their schedules and appointment slots.
+
+This repository contains the initial backend architecture, documentation, and database design created as part of the Backend Internship Program.
+
+---
+
+# Business Problem
+
+Healthcare appointment management is often fragmented and difficult to scale.
+
+Common challenges include:
+
+* Manual appointment booking processes
+* Double-booking of consultation slots
+* Lack of real-time availability tracking
+* Poor communication between doctors and patients
+* Difficulty managing cancellations and rescheduling
+
+Schedula aims to solve these challenges through a structured and scalable scheduling platform.
+
+---
+
+# User Roles
+
+## Patient
+
+Patients can:
+
+* Create and manage accounts
+* Browse doctors
+* View doctor profiles and specializations
+* Check available appointment slots
+* Book appointments
+* Reschedule appointments
+* Cancel appointments
+* Receive reminders and notifications
+
+---
+
+## Doctor
+
+Doctors can:
+
+* Register on the platform
+* Complete profile setup
+* Manage availability slots
+* View scheduled appointments
+* Organize consultation schedules
+* Receive appointment notifications
+
+---
+
+## Future Scope: Admin
+
+Future versions of the platform may include an administrative role responsible for:
+
+* User management
+* Platform monitoring
+* System reporting
+* Operational oversight
+
+---
+
+# Technology Stack
+
+| Component         | Technology           |
+| ----------------- | -------------------- |
+| Backend Framework | NestJS               |
+| Language          | TypeScript           |
+| Database          | PostgreSQL           |
+| API Testing       | Postman / Hoppscotch |
+| Version Control   | Git & GitHub         |
+
+---
+
+# Backend Architecture
+
+The backend follows a modular architecture to improve scalability and maintainability.
+
+Modules identified during system analysis:
+
+* User Module
+* Doctor Module
+* Patient Module
+* Availability Module
+* Appointment Module
+* Notification Module
+
+This structure allows features to evolve independently while maintaining clean separation of responsibilities.
+
+---
+
+# Database Design
+
+The database was designed after analyzing the complete workflow provided in the wireframe.
+
+Core entities include:
+
+* User
+* Doctor
+* Patient
+* Availability
+* Appointment
+* Notification
+
+Key design decisions:
+
+### Centralized User Management
+
+Authentication and authorization are handled through a common User entity to avoid duplication of login-related information.
+
+### Separate Availability Management
+
+Doctor availability is maintained independently from appointments. This prevents scheduling conflicts and simplifies rescheduling workflows.
+
+### Notification System
+
+Notifications are linked directly to users, making it easier to support reminders, updates, and future communication features.
+
+---
+
+# Documentation
+
+The project includes supporting documentation to explain system design decisions.
+
+```text
+docs/
+├── project-overview.md
+├── entity-analysis.md
+└── ER-DIAGRAM.png
 ```
 
-## Compile and run the project
+### Project Overview
 
-```bash
-# development
-$ npm run start
+High-level understanding of the healthcare scheduling system and user workflows.
 
-# watch mode
-$ npm run start:dev
+### Entity Analysis
 
-# production mode
-$ npm run start:prod
+Detailed breakdown of entities, attributes, and relationships identified from the wireframe.
+
+### ER Diagram
+
+Visual representation of the database schema and entity relationships.
+
+---
+
+# Project Structure
+
+```text
+schedula-backend/
+
+├── docs/
+│   ├── project-overview.md
+│   ├── entity-analysis.md
+│   └── ER-DIAGRAM.png
+│
+├── src/
+│   ├── users/
+│   ├── doctors/
+│   ├── patients/
+│   ├── appointments/
+│   ├── availability/
+│   └── notifications/
+│
+├── test/
+│
+├── package.json
+└── README.md
 ```
 
-## Run tests
+---
+
+# Getting Started
+
+### Install Dependencies
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+npm install
 ```
 
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+### Run Development Server
 
 ```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
+npm run start:dev
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+### Application URL
 
-## Resources
+```text
+http://localhost:3000
+```
 
-Check out a few resources that may come in handy when working with NestJS:
+If the setup is successful, the NestJS application will start locally without errors.
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+---
 
-## Support
+# Deliverables Completed
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+* NestJS project setup
+* Local application execution
+* Workflow analysis
+* Entity identification
+* Entity relationship design
+* ER Diagram creation
+* GitHub repository setup
+* Feature branch workflow
+* Pull Request submission
 
-## Stay in touch
+---
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+# Key Learnings
 
-## License
+This assignment helped strengthen my understanding of:
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+* NestJS fundamentals
+* Backend project organization
+* Database design principles
+* Entity relationship modeling
+* Git and GitHub workflows
+* Translating business requirements into technical architecture
+
+Most importantly, it highlighted the importance of understanding a product before writing code.
+
+---
+
+# Author
+
+**Pranav Dogra**
+
+Backend Internship Program – Day 1 Submission
