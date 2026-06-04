@@ -1,478 +1,174 @@
-# Schedula-Pranav
+# Schedula – Backend Internship Journey
 
+## About This Repository
 
+This repository documents my work, learning progress, and project submissions throughout the Schedula Backend Internship Program.
 
-\# Schedula Backend
+The internship is centered around building the backend of a healthcare appointment scheduling platform called **Schedula**. Instead of focusing only on coding, the program emphasizes understanding how real software products are designed, planned, developed, and maintained in professional engineering environments.
 
+As the internship progresses, this repository will continue to grow with new backend modules, database designs, APIs, documentation, deployment configurations, and feature implementations.
 
+---
 
-\## About the Project
+## Why This Internship?
 
+Modern backend systems are much more than APIs and databases. They require thoughtful system design, scalability planning, security considerations, and collaboration through professional development workflows.
 
+The objective of this internship is to gain practical experience by working on a real-world healthcare product while learning industry-standard backend development practices.
 
-Schedula is a healthcare appointment scheduling platform that aims to make the appointment booking process simpler and more organized for both patients and doctors.
+Through this journey, I aim to strengthen my understanding of:
 
+* Backend application architecture
+* System design fundamentals
+* Database modeling and relationships
+* REST API development
+* Authentication and authorization
+* Deployment workflows
+* Git and GitHub collaboration
+* Scalable software engineering practices
 
+Every task completed during this internship contributes to building a production-oriented backend system while improving my overall engineering skills.
 
-In many healthcare systems, appointment scheduling is still handled manually through phone calls or physical visits. This often leads to scheduling conflicts, communication delays, and difficulty managing appointments. The goal of Schedula is to provide a centralized platform where patients can easily discover doctors, check availability, schedule appointments, and receive important updates regarding their consultations.
+---
 
+## About Schedula
 
+Schedula is a healthcare appointment scheduling platform designed to simplify interactions between patients and doctors.
 
-From a doctor's perspective, the platform helps manage availability, organize appointments, and improve communication with patients.
+The platform focuses on creating a smooth appointment management experience by allowing patients to discover doctors, view available time slots, book appointments, and receive important updates.
 
+At the same time, doctors can efficiently manage their schedules, maintain availability, and track upcoming consultations.
 
+### Core Objectives
 
-This repository contains the initial backend setup, system analysis, and database design completed as part of the Backend Internship Program Day 1 assignment.
+* Simplify appointment booking
+* Improve schedule management
+* Reduce manual coordination
+* Prevent scheduling conflicts
+* Enable efficient communication through notifications
+* Create a centralized healthcare scheduling platform
 
+---
 
+## Technologies Used
 
-\---
+Throughout this internship, the following technologies and tools are being used:
 
+### Backend Development
 
+* NestJS
+* TypeScript
 
-\## My Understanding of the System
+### Database
 
+* PostgreSQL
 
+### API Development & Testing
 
-After reviewing the provided wireframe, I understood that the platform revolves around two primary users:
+* Postman
+* Hoppscotch
 
+### Version Control
 
+* Git
+* GitHub
 
-\### Patient
+### Deployment & Hosting
 
+* Render
+* PostgreSQL Cloud Database
 
+---
 
-A patient should be able to:
+## Learning Areas
 
+This internship provides hands-on exposure to several important areas of backend engineering.
 
+### Backend Architecture
 
-\* Create an account and log in securely
+Understanding how scalable applications are structured using modular design principles and clean project organization.
 
-\* Browse available doctors
+### Database Design
 
-\* View doctor information and specialization
+Designing efficient and normalized database schemas using proper entity relationships and business requirements.
 
-\* Check available consultation slots
+### API Development
 
-\* Book appointments
+Building reliable APIs that support real-world workflows and application functionality.
 
-\* Reschedule appointments when required
+### Authentication & Authorization
 
-\* Cancel appointments if necessary
+Implementing secure user management and role-based access control.
 
-\* Receive notifications and appointment reminders
+### Git & Collaboration
 
+Following professional development workflows through branching strategies, commits, pull requests, and code reviews.
 
+### Deployment & DevOps Fundamentals
 
-\### Doctor
+Learning how backend applications are deployed, configured, and maintained in cloud environments.
 
+---
 
-
-A doctor should be able to:
-
-
-
-\* Register on the platform
-
-\* Create and manage a professional profile
-
-\* Define available consultation timings
-
-\* View upcoming appointments
-
-\* Manage appointment schedules
-
-\* Receive notifications regarding bookings and updates
-
-
-
-\### Admin (Future Scope)
-
-
-
-Although not required for the current assignment, an administrator could later manage platform users, monitor activity, and oversee system operations.
-
-
-
-\---
-
-
-
-\## Objectives of this Assignment
-
-
-
-The purpose of this assignment was not only to create a NestJS application but also to understand the overall product and think about how the backend should be structured before implementation.
-
-
-
-The focus areas were:
-
-
-
-\* Understanding the healthcare scheduling workflow
-
-\* Identifying important business entities
-
-\* Designing relationships between entities
-
-\* Setting up a scalable backend project structure
-
-\* Following a professional Git and GitHub workflow
-
-
-
-\---
-
-
-
-\## Technology Stack
-
-
-
-The following technologies were used for this assignment:
-
-
-
-\### Backend Framework
-
-
-
-\* NestJS
-
-
-
-\### Programming Language
-
-
-
-\* TypeScript
-
-
-
-\### Database
-
-
-
-\* PostgreSQL
-
-
-
-\### API Testing
-
-
-
-\* Postman / Hoppscotch
-
-
-
-\### Version Control
-
-
-
-\* Git
-
-\* GitHub
-
-
-
-\---
-
-
-
-\## Project Setup
-
-
-
-\### Install Dependencies
-
-
-
-```bash
-
-npm install
-
-```
-
-
-
-\### Start Development Server
-
-
-
-```bash
-
-npm run start:dev
-
-```
-
-
-
-\### Application URL
-
-
+## Repository Structure
 
 ```text
-
-http://localhost:3000
-
-```
-
-
-
-If the setup is successful, the NestJS application should start without any errors and be accessible locally.
-
-
-
-\---
-
-
-
-\## Project Structure
-
-
-
-```text
-
 Schedula-Pranav/
-
-
-
+│
 ├── README.md
-
-
-
-├── docs/
-
-│   ├── project-overview.md
-
-│   ├── entity-analysis.md
-
-│   └── ER-DIAGRAM.png
-
-
-
-├── screenshots/
-
-│   └── nest-app-running.png
-
-
-
+│
 └── schedula-backend/
-
-&#x20;   ├── src/
-
-&#x20;   ├── test/
-
-&#x20;   ├── package.json
-
-&#x20;   └── ...
-
+    │
+    ├── docs/
+    │   ├── project-overview.md
+    │   ├── entity-analysis.md
+    │   └── ER-DIAGRAM.png
+    │
+    ├── src/
+    │   ├── users/
+    │   ├── doctors/
+    │   ├── patients/
+    │   ├── appointments/
+    │   ├── availability/
+    │   └── notifications/
+    │
+    ├── test/
+    │
+    ├── package.json
+    ├── nest-cli.json
+    └── README.md
 ```
 
+---
 
+## Progress So Far
 
-\---
+### Day 1 – Project Foundation
 
+Completed:
 
+* NestJS project setup
+* Repository setup and Git workflow
+* Healthcare workflow analysis
+* Entity identification
+* Entity relationship design
+* ER Diagram creation
+* Documentation preparation
+* Pull Request workflow
 
-\## Core Backend Modules Identified
+Upcoming phases will focus on backend module development, database integration, API implementation, authentication, and deployment.
 
+---
 
+## Author
 
-Based on the workflow analysis, the following modules were identified as essential for the system:
+### Pranav Dogra
 
+M.Tech Cyber Security
+National Forensic Sciences University (NFSU), Delhi
 
+Backend Internship Program – Schedula
 
-\### User Module
-
-
-
-Responsible for authentication and role management.
-
-
-
-\### Doctor Module
-
-
-
-Responsible for storing and managing doctor-related information.
-
-
-
-\### Patient Module
-
-
-
-Responsible for maintaining patient-specific records.
-
-
-
-\### Availability Module
-
-
-
-Responsible for managing doctor availability and consultation slots.
-
-
-
-\### Appointment Module
-
-
-
-Responsible for booking, rescheduling, cancelling, and tracking appointments.
-
-
-
-\### Notification Module
-
-
-
-Responsible for appointment confirmations, reminders, and system notifications.
-
-
-
-\---
-
-
-
-\## Database Design Approach
-
-
-
-Before creating the ER Diagram, I analyzed the workflow and identified the relationships between different entities.
-
-
-
-The primary entities selected were:
-
-
-
-\* User
-
-\* Doctor
-
-\* Patient
-
-\* Availability
-
-\* Appointment
-
-\* Notification
-
-
-
-Some key design decisions:
-
-
-
-\* A centralized User entity is used for authentication and role management.
-
-\* Doctor and Patient are separated to avoid data duplication.
-
-\* Availability is maintained independently from appointments to prevent scheduling conflicts.
-
-\* Notifications are linked to users so that reminders and updates can be managed efficiently.
-
-
-
-This approach keeps the design simple, normalized, and scalable for future development.
-
-
-
-\---
-
-
-
-\## Deliverables Completed
-
-
-
-\### Project Setup
-
-
-
-\* NestJS application successfully created
-
-\* Application runs locally without errors
-
-
-
-\### Documentation
-
-
-
-\* Project overview document created
-
-\* Entity analysis document created
-
-
-
-\### Database Design
-
-
-
-\* ER Diagram created based on workflow analysis
-
-\* Relationships and foreign keys identified
-
-
-
-\### Version Control
-
-
-
-\* Repository created using GitHub
-
-\* Feature branch workflow followed
-
-\* Pull Request raised for review
-
-
-
-\---
-
-
-
-\## Key Learnings
-
-
-
-Through this assignment, I gained a better understanding of:
-
-
-
-\* NestJS project structure
-
-\* Modular backend architecture
-
-\* Entity relationship modeling
-
-\* Database design fundamentals
-
-\* Git branching workflow
-
-\* Pull Request based collaboration
-
-
-
-More importantly, I learned the importance of understanding business requirements before starting implementation.
-
-
-
-\---
-
-
-
-\## Author
-
-
-
-\*\*Pranav Dogra\*\*
-
-
-
-Backend Internship Program – Day 1 Submission
 
 
 
